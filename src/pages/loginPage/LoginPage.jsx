@@ -28,7 +28,7 @@ export default function Login() {
       });
       setUserInfo(response.data); // Update userInfo with the data from the API
       console.log(response.data);
-
+      localStorage.setItem('userInfo', JSON.stringify(response.data));
       navigate('/');
     } catch (error) {
       console.log(error);

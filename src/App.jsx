@@ -14,6 +14,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/create" element={<SignUp />} />
         </Route>
       </Routes>
     </UserContextProvider>
