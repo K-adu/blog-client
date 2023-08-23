@@ -1,0 +1,88 @@
+/* BlogForm.css */
+
+/* Container for the entire form */
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading style */
+h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* Form fields */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Cover image upload style */
+.cover-image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cover-image-upload label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cover-image-upload input[type="file"] {
+  display: none;
+}
+
+.cover-image-upload img {
+  max-width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Title style */
+input[type="text"] {
+  padding: 0.8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 24px;
+  max-width: 600px;
+}
+
+/* Description style */
+textarea {
+  padding: 100px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  min-height: 200px;
+  min-width: 700px;
+}
+
+/* Create button style */
+button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue color for the button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import SignUp from './pages/signupPage/Signup';
 import Login from './pages/loginPage/LoginPage';
 import { UserContextProvider } from './components/context/UserContext';
+import CreateBlog from './pages/blogs/CreateBlogs';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/create" element={<SignUp />} />
+          <Route path="/create" element={<CreateBlog />} />
         </Route>
       </Routes>
     </UserContextProvider>

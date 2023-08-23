@@ -40,6 +40,7 @@ export default function NavBar() {
             <Link to="/create">
               <button>Create New Post</button>
             </Link>
+            <Link to="/myblog">My Blogs</Link>
           </div>
         </>
       ) : (
