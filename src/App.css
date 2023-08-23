@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+/* App.css */
+
+/* Reset some default styles */
+body, p {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Define styles for the whole app */
+.app {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Navigation Bar Styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-size: 24px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 10px;
+}
+/* Update the button styles in your CSS file */
+
+.auth-buttons button {
+  background-color: #007BFF; /* Change to your desired button color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px; /* Increase padding for a larger button */
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Add rounded corners for a modern look */
+  transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+.auth-buttons button:hover {
+  background-color: #0056b3; /* Change to a darker color on hover */
+}
+
+/* Adjust other button properties (font size, font-weight, etc.) as needed */
+
+
+/* Main Content Styles */
+.main-content {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.blog-card {
+  width: calc(33.33% - 20px); /* 3 columns with some spacing between */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.blog-card img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.blog-details {
+  padding: 10px;
+}
+
+.blog-details h2 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.blog-details p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
 }

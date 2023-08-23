@@ -1,0 +1,29 @@
+/* UserDetails.css */
+
+.user-details {
+  padding: 20px;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 24px; /* Larger font size for the name */
+  color: #007BFF; /* Bluish color for the name */
+  margin-bottom: 1px; /* Add spacing below the name */
+}
+.homelogo {
+  font-weight: bold;
+  font-size: 24px; /* Larger font size for the name */
+  color: #bcd4ec; /* Bluish color for the name */
+  margin-bottom: 1px; /* Add spacing below the name */
+}
+.details-list {
+  list-style-type: disc; /* Use bullet points for details */
+  padding-left: 20px; /* Adjust the indentation of bullet points */
+  margin: 0; /* Remove margin to keep content aligned */
+}
+
+.detail {
+  font-size: 16px; /* Font size for details */
+  color: #fff; /* White text color for details */
+  margin: 5px 0; /* Add spacing between details */
+}
