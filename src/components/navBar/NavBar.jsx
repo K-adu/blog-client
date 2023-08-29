@@ -8,26 +8,42 @@ import { UserContext } from '../context/UserContext';
 
 export default function NavBar() {
   const { setUserInfo, userInfo } = useContext(UserContext);
-  useEffect(() => {
-    const userInfoFromStorage = localStorage.getItem('userInfo');
+  useEffect(async () => {
+    const userInfoFromStorage = await localStorage.getItem('userInfo');
     if (userInfoFromStorage) {
       setUserInfo(JSON.parse(userInfoFromStorage));
     }
   }, []);
-
-  const email = userInfo.email;
+  // let email = null;:
+  // if (userInfo.email) {
+  //   email = userInfo.email;
+  //   email = null;
+  // }
   console.log(userInfo);
+  async function logout() {
+    try {
+      await axios.post('http://localhost:4000/auth/logout', '', {
+        withCredentials: true,
+      });
+      localStorage.clear();
+      setUserInfo(null);
+    } catch (error) {
+      // Handle the error (e.g., display an error message to the user)
+      console.error('Logout failed:', error);
+    }
+  }
+
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link to="/" className="navbar">
-          MyBlog
+        <Link to="/" className="name">
+          Bloog
         </Link>
       </div>
       <div className="search-field">
         <input type="text" placeholder="Search..." />
       </div>
-      {email ? ( // Use ternary operator for conditional rendering
+      {userInfo && userInfo.email ? ( // Use ternary operator for conditional rendering
         <>
           <div className="user-profile">
             <img
@@ -40,8 +56,13 @@ export default function NavBar() {
             <Link to="/create">
               <button>Create New Post</button>
             </Link>
-            <Link to="/myblog">My Blogs</Link>
-          </div>
+            <Link to="/myblogs">
+              <button>My blogs</button>
+            </Link>
+          </div>{' '}
+          <Link to="/" onClick={logout} className="name">
+            Logout
+          </Link>
         </>
       ) : (
         <div className="auth-buttons">

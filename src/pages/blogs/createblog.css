@@ -1,6 +1,19 @@
 /* BlogForm.css */
 
 /* Container for the entire form */
+
+/* Add this to your CSS */
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* You can use 'space-around' or other values for spacing */
+}
+
+.blog-card {
+  width: 48%; /* Adjust the width as needed to fit your layout */
+  margin-bottom: 20px; /* Add margin for spacing */
+}
+
 .container {
   width: 70%;
   margin: 0 auto;
@@ -44,7 +57,7 @@ form {
 
 .cover-image-upload img {
   max-width: 100%;
-  max-height: 300px;
+  max-height: 10px;
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
